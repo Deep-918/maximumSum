@@ -1,0 +1,15 @@
+<br>
+<br>
+<div id="numbersList">
+<ul>
+  <li *ngFor="let number of numbers" (click)="onSelect(number)">
+     <a href="#" id={{number}}>{{number}}</a>
+  </li>
+</ul>
+</div>
+<br>
+<div id="gameStatus">
+  <game-status [playerTurn] ="playerOneTurn" [playerOneSum]="playerOneSum" [playerTwoSum]="playerTwoSum"
+  [isGameOver] = "isGameOver">
+  </game-status>
+</div>

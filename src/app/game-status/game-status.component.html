@@ -1,0 +1,19 @@
+<h2>Game Status: <span *ngIf="!isGameOver">In Progress</span>
+  <span *ngIf="isGameOver">Over</span>
+</h2>
+  <div *ngIf="!isGameOver">
+ Turn for: <b><span *ngIf="playerTurn">Player one</span>
+<span *ngIf="!playerTurn">Player two</span></b>
+</div>
+<br>
+<div>
+  Player one sum: <b>{{playerOneSum}}</b>
+</div>
+<div>
+  Player two sum: <b>{{playerTwoSum}}</b>
+</div>
+<br>
+<div *ngIf="isGameOver">
+  <b>Winner is <span *ngIf="playerOneSum > playerTwoSum">Player one</span>
+    <span *ngIf="playerOneSum < playerTwoSum">Player two</span></b>
+</div>
